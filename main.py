@@ -5,8 +5,8 @@ def on_forever():
     nick = input.button_is_pressed(Button.A)
     if nick:
         while nick:
-            print("hi")
+            print("true")
             nick = False
     else:
-        print(":)")
+        print("false")
 basic.forever(on_forever)

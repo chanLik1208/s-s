@@ -3,10 +3,10 @@ basic.forever(function () {
     nick = input.buttonIsPressed(Button.A)
     if (nick) {
         while (nick) {
-            console.log("hi")
+            console.log("true")
 nick = false
         }
     } else {
-        console.log(":)")
+        console.log("false")
     }
 })
