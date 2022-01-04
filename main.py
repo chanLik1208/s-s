@@ -1,19 +1,30 @@
 nick = False
 blue = False
+print("on os by nick")
 
 def on_forever():
-    global nick
+    global nick, blue
+    basic.clear_screen()
     nick = input.button_is_pressed(Button.A)
     if nick:
-            print("A true")
-            nick = False
-    else:
-        print("A false")
-    global blue
+        basic.show_leds("""
+            . . # . .
+                        . # . # .
+                        # # # # #
+                        # . . . #
+                        # . . . #
+        """)
+        print("A true")
+        nick = False
     blue = input.button_is_pressed(Button.B)
     if blue:
-                    print("B true")
-                    blue = False
-    else:
-                print("B false")
+        basic.show_leds("""
+            # # . . .
+                        # . # . .
+                        # # . . .
+                        # . # . .
+                        # # . . .
+        """)
+        print("B true")
+        blue = False
 basic.forever(on_forever)

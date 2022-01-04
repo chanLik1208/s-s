@@ -1,5 +1,6 @@
-let nick = false
 let blue = false
+let nick = false
+console.log("on os by nick")
 basic.forever(function () {
     basic.clearScreen()
     nick = input.buttonIsPressed(Button.A)
@@ -13,8 +14,6 @@ basic.forever(function () {
             `)
         console.log("A true")
 nick = false
-    } else {
-        console.log("A false")
     }
     blue = input.buttonIsPressed(Button.B)
     if (blue) {
@@ -27,7 +26,5 @@ nick = false
             `)
         console.log("B true")
 blue = false
-    } else {
-        console.log("B false")
     }
 })
